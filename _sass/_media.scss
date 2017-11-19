@@ -54,6 +54,7 @@
       .submenu {
         display: none;
       }
+
     }
   }
 
@@ -70,6 +71,13 @@
     max-width: 200px;
     margin: 25px auto;
   }
+
+
+  .single-page .main-section table:not(.hljs-ln) td,
+  .single-page .main-section table:not(.hljs-ln) th{
+    min-width:100px !important;
+  }
+
 }
 @media(max-width: 768px) {
   .services .single-service {
