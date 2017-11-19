@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imagine that... - CARTO</title>
+  <link rel="icon" href="/assets/images/icon.png" type="image/x-icon">
+  <link href="/assets/css/style.css" rel="stylesheet" />
+  <link href="/assets/css/monokai.css" rel="stylesheet" />
+  <script src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="/assets/js/slide-menu.js"></script>
+  <script src="/assets/js/highlight.pack.js"></script>
+  <script src="/assets/js/highlightjs-line-numbers.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="menu container">
+      <nav class="primary-menu">
+        <a href="/" title="Homepage"><img id="logo" src="/assets/images/logo.png"/ alt="Logo"></a>
+        <ul>
+          <li><a href="#">Builder</a></li>
+          <li><a href="#">Engine</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <nav class="secondary-menu">
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+    </nav>
+    <nav class="menu-responsive-container">
+      <img src="/assets/images/logo.png" alt="Demo Logo" class="logo-responsive">
+      <p class="spmenu sp-block"><img src="/assets/images/menu_mobile.svg" alt="Menu mobile"></p>
+      <nav class="sp-nav">
+        <ul class="list-unstyled">
+          <ul>
+            <li><a href="#">Builder</a></li>
+            <li><a href="#">Engine</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  {{content}}
+
+  <footer>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".submenu-link").click(function() {
+          $(".submenu").slideToggle("slow");
+        });
+
+        $(".spmenu").click(function() {
+          if ($(".logo-responsive").hasClass("close")) {
+            $(".logo-responsive").animate({
+              width: 'show'
+            });
+            $(".logo-responsive").addClass("open");
+            $(".logo-responsive").removeClass("close");
+          } else {
+            $(".logo-responsive").animate({
+              width: 'hide'
+            });
+            $(".logo-responsive").addClass("close");
+            $(".logo-responsive").removeClass("open");
+          }
+
+        });
+      });
+    </script>
+
+  </footer>
+</body>

@@ -1,0 +1,40 @@
+header {
+  border-bottom: 1px solid rgba(22,41,69,0.1);
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .primary-menu,
+    .secondary-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 19px 0;
+      font-family: $main_font_semibold;
+
+      #logo {
+        margin-right: 40px;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          font-size: 13px;
+          font-weight: 700;
+
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+
+          a {
+            color: $dark_main_color;
+          }
+        }
+      }
+    }
+  }
+}
